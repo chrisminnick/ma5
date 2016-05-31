@@ -1,0 +1,22 @@
+{
+  "name": "ma5-refactoring",
+  "version": "1.0.0",
+  "description": "Source code and examples from Ed2Go MA5 by Chris Minnick",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisminnick/ma5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisminnick/ma5/issues"
+  },
+  "homepage": "https://github.com/chrisminnick/ma5#readme",
+  "devDependencies": {
+    "eslint": "^2.11.1"
+  }
+}

@@ -18,31 +18,37 @@
         var t;
         var color=0;
         var flipping=0;
+        var speed;
 
         function flip(whichway){
             document.body.style.backgroundColor = light[whichway];
             stopFlip();
         }
-        function autoFlip(speed) {
-            document.body.style.backgroundColor = light[color];
-            if (color < light.length-1) {
-                color++;
-            } else {
-                color=0;
-            }
-            t = setTimeout(autoFlip,speed);
-        }
-        function doAutoFlip(changespeed){
-            if (!flipping){
-                flipping=1;
-                speed=changespeed;
+
+
+        function doAutoFlip(changespeed) {
+            if (!flipping) {
+                flipping = 1;
+                speed = changespeed;
                 autoFlip();
             }
+
+            function autoFlip() {
+                document.body.style.backgroundColor = light[color];
+                if (color < light.length - 1) {
+                    color++;
+                } else {
+                    color = 0;
+                }
+                t = setTimeout(autoFlip, speed);
+            }
         }
+
         function stopFlip() {
             clearTimeout(t);
             flipping=0;
         }
+
     </script>
 </head>
 <body>

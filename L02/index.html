@@ -18,7 +18,6 @@
         var t;
         var color=0;
         var flipping=0;
-        var speed;
 
         function flip(whichway){
             document.body.style.backgroundColor = light[whichway];
@@ -26,10 +25,9 @@
         }
 
 
-        function doAutoFlip(changespeed) {
+        function doAutoFlip(speed) {
             if (!flipping) {
                 flipping = 1;
-                speed = changespeed;
                 autoFlip();
             }
 

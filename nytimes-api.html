@@ -1,0 +1,30 @@
+
+<html>
+ 	 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  	<script>
+  	// Built by LucyBot. www.lucybot.com
+	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+	url += '?' + $.param({
+	  'api-key': "1957e535b0e84b7495166a3b4fd6e2af",
+	  'q': "Sacramento"
+	});
+	$.ajax({
+	  url: url,
+	  method: 'GET',
+	}).done(function(result) {
+	  console.log(result);
+	  	document.getElementById("headline").innerHTML = result.response.docs["0"].headline.main;
+	}).fail(function(err) {
+	  throw err;
+	});
+
+</script>
+	</head>
+	<body>
+
+		<h1 id="headline"></h1>
+
+
+	</body>
+</html>
